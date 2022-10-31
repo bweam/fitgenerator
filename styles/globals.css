@@ -50,13 +50,31 @@ a {
 #menu-items:hover > .menu-item {
   opacity: 0.3;
   position: initial;
-  font-size: clamp(2rem, 6vw, 6rem);
+  /* font-size: clamp(2rem, 6vw, 6rem); */
 }
 
 #menu-items:hover > .menu-item:hover {
   opacity: 1;
   position: initial;
   font-size: inherit;
+}
+
+#background-pattern {
+  position: absolute;
+  z-index: 0;
+  height: 100vh;
+  width: 100vw;
+
+  background-image: radial-gradient(
+    rgba(2255, 255, 255, 0.1) 9%,
+    transparent 9%
+  );
+  background-position: 0% 0%;
+  background-size: 12vmin 12vmin;
+
+  transition: background-position 800ms ease,
+  opacity 800ms ease,
+  background-size 800ms ease;
 }
 
 #background-img {
@@ -66,9 +84,9 @@ a {
   background-image: url('https://images.unsplash.com/photo-1556905055-8f358a7a47b2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80');
   left: 0px;
   top: 0px;
-  z-index: 0;
+  z-index: -1;
   background-position: center 40%;
-  background-size: 160vmax;
+  background-size: 150vmax;
   opacity: 0.25;
 
   transition: opacity 800ms ease,
@@ -76,21 +94,38 @@ a {
   background-position 800ms ease;
 }
 
-#menu-items:hover ~ #background-img{
-  background-size: 150vmax;
-  opacity: 0.2;
+#menu-items:hover ~ #background-pattern {
+  background-size: 11vmin 11vmin;
+  opacity: 0.5;
 }
 
-#menu[data-active-index="0"] > #nackground-img {
+#menu[data-active-index="0"] > #background-pattern {
   background-position: center 45%;
 }
 
-#menu[data-active-index="1"] > #background-image {
-  background-position: center 50%;
+#menu[data-active-index="1"] > #background-pattern {
+  background-position: center 55%;
 }
 
-#menu[data-active-index="2"] > #background-image {
+#menu[data-active-index="2"] > #background-pattern {
+  background-position: center 65%;
+}
+
+#menu-items:hover ~ #background-img{
+  background-size: 130vmax;
+  opacity: 0.2;
+}
+
+#menu[data-active-index="0"] > #background-img {
+  background-position: center 45%;
+}
+
+#menu[data-active-index="1"] > #background-img {
   background-position: center 55%;
+}
+
+#menu[data-active-index="2"] > #background-img {
+  background-position: center 65%;
 }
 
 /* #menu[data-active-index="3"] > #menu-background-image {
