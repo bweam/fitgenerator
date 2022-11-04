@@ -31,8 +31,20 @@ export default function Home() {
             <div className="letter"> i </div>
             <div className="letter"> t </div>
             <div className="letter">&nbsp;</div>
-            <div className="letter"> G </div>
-            <div className="letter"> e </div>
+              <div className="flip5">
+                <div className="letter"> G </div>
+                <div className="letter"> X </div>
+                <div className="letter"> K </div>
+                <div className="letter"> L </div>
+                <div className="letter"> 3 </div>
+              </div>
+              <div className="flip5-2">
+                <div className="letter"> e </div>
+                <div className="letter"> i </div>
+                <div className="letter"> u </div>
+                <div className="letter"> l </div>
+                <div className="letter"> o </div>
+              </div>
             <div className="letter"> n </div>
             <div className="letter"> e </div>
             <div className="letter"> r </div>

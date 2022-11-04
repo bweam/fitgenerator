@@ -68,10 +68,13 @@ a {
 .title{
   display: flex;
   font-family: 'Times New Roman', Times, serif;
-  font-size: clamp(3rem, 8vw, 8rem);
+  font-size: clamp(3rem, 20vh, 8rem);
   flex-direction: row;
   cursor: pointer;
   transition: font-size 400ms ease, opacity 800ms ease;
+  height: 20vh;
+  overflow: hidden;
+  /* background-color: yellow; */
 }
 
 /* .title:hover{
@@ -186,3 +189,46 @@ a {
 /* #menu[data-active-index="3"] > #menu-background-image {
   background-position: center 60%;
 } */
+
+.flip5 { 
+  animation: flip5 12s cubic-bezier(0.23, 1, 0.32, 1.2) 10; 
+}
+.flip5-2 { 
+  animation: flip5 0.1s cubic-bezier(0.23, 1, 0.32, 1.2) 11; 
+}
+.flip5-3 { 
+  animation: flip5 0.15s cubic-bezier(0.23, 1, 0.32, 1.2) 12; 
+}
+.flip5-4 { 
+  animation: flip5 0.2s cubic-bezier(0.23, 1, 0.32, 1.2) 13; 
+}
+.flip5-5 { 
+  animation: flip5 0.25s cubic-bezier(0.23, 1, 0.32, 1.2) 14; 
+}
+.flip5-6 { 
+  animation: flip5 0.3s cubic-bezier(0.23, 1, 0.32, 1.2) 15; 
+}
+.flip5-7 { 
+  animation: flip5 0.35s cubic-bezier(0.23, 1, 0.32, 1.2) 16; 
+}
+.flip5-8 { 
+  animation: flip5 0.4s cubic-bezier(0.23, 1, 0.32, 1.2) 17; 
+}
+.flip5-9 { 
+  animation: flip5 0.45s ease 18; 
+}
+
+@keyframes flip5 {
+    0% { margin-top: -450px; }
+    5% { margin-top: -360px; }
+    20% { margin-top: -360px; }
+    25% { margin-top: -270px; }
+    40% { margin-top: -270px; }
+    45% { margin-top: -180px; }
+    60% { margin-top: -180px; }
+    65% { margin-top: -90px; }
+    80% { margin-top: -90px; }
+    85% { margin-top: 0px; }
+    99.99% { margin-top: 0px; }
+    100% { margin-top: -450px; }
+}
