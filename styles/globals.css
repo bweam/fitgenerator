@@ -35,6 +35,11 @@ a {
   width: 100vw;
   z-index: 10;
   animation: animate-background 15s ease infinite reverse;
+  transition: opacity 800ms ease;
+}
+.loading-layer[data-status = "inactive"] {
+  opacity: 0;
+  pointer-events: none;
 }
 
 @keyframes animate-background {

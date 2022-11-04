@@ -4,10 +4,16 @@ import styles from "../styles/Home.module.css";
 import dynamic from "next/dynamic";
 import { useEffect } from "react";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function Home() {
+
+  const [loader, setLoader] = useState();
+
   useEffect(() => {
+    setLoader(document.getElementsByClassName('loading-layer'))
     const menu = document.getElementById("menu");
+    
 
     Array.from(document.getElementsByClassName("menu-item")).forEach(
       (item, index) => {
@@ -18,15 +24,21 @@ export default function Home() {
       }
     );
   });
+
+  const handleClickTitle = () => {
+    console.log('hi')
+    console.log(loader['0']['dataset']['status']);
+    setLoader(...loader, loader['0']['dataset']['status'] = "inactive")
+  }
   // const DynamicComponentWithNoSSR = dynamic(() => import('../components/List'), {
   //   ssr: false
   // })
 
   return (
     <div className="bg">
-      <div className="loading-layer">
+      <div className="loading-layer" data-status="active">
         <div className="title-box">
-          <div className="title">
+          <div className="title" onClick={handleClickTitle}>
             <div className="letter"> F </div>
             <div className="letter"> i </div>
             <div className="letter"> t </div>
