@@ -19,10 +19,56 @@ a {
   html {
     color-scheme: dark;
   }
+
   body {
     color: white;
     background: black;
   }
+}
+
+.loading-layer {
+  position: absolute;
+  background: rgb(2,0,36);
+  background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(58,58,58,1) 77%, rgba(60,60,60,1) 100%);
+  background-size: 400% 400%;
+  height: 100vh;
+  width: 100vw;
+  z-index: 10;
+  animation: animate-background 15s ease infinite reverse;
+}
+
+@keyframes animate-background {
+	0% {
+		background-position: 50% 50%;
+	}
+	20% {
+		background-position: 0% 100%;
+  }
+  40% {
+		background-position: 0% 50%;
+  }
+  60% {
+		background-position: 50% 0%;
+  }
+  80% {
+		background-position: 100% 0%;
+  }
+  100% {
+		background-position: 50% 50%;
+	}
+}
+.title-box{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: clamp(3rem, 8vw, 8rem);
+  cursor: pointer;
 }
 
 #menu {
@@ -32,6 +78,7 @@ a {
   align-items: center;
   z-index: 0;
 }
+
 #menu-items {
   font-family: 'Times New Roman', Times, serif;
   font-size: clamp(3rem, 8vw, 8rem);
@@ -47,13 +94,13 @@ a {
   z-index: 3;
 }
 
-#menu-items:hover > .menu-item {
+#menu-items:hover>.menu-item {
   opacity: 0.3;
   position: initial;
   /* font-size: clamp(2rem, 6vw, 6rem); */
 }
 
-#menu-items:hover > .menu-item:hover {
+#menu-items:hover>.menu-item:hover {
   opacity: 1;
   position: initial;
   font-size: inherit;
@@ -65,16 +112,14 @@ a {
   height: 100vh;
   width: 100vw;
 
-  background-image: radial-gradient(
-    rgba(2255, 255, 255, 0.1) 9%,
-    transparent 9%
-  );
+  background-image: radial-gradient(rgba(2255, 255, 255, 0.1) 9%,
+      transparent 9%);
   background-position: 0% 0%;
   background-size: 12vmin 12vmin;
 
   transition: background-position 800ms ease,
-  opacity 800ms ease,
-  background-size 800ms ease;
+    opacity 800ms ease,
+    background-size 800ms ease;
 }
 
 #background-img {
@@ -90,41 +135,41 @@ a {
   opacity: 0.25;
 
   transition: opacity 800ms ease,
-  background-size 800ms ease,
-  background-position 800ms ease;
+    background-size 800ms ease,
+    background-position 800ms ease;
 }
 
-#menu-items:hover ~ #background-pattern {
+#menu-items:hover~#background-pattern {
   background-size: 11vmin 11vmin;
   opacity: 0.5;
 }
 
-#menu[data-active-index="0"] > #background-pattern {
+#menu[data-active-index="0"]>#background-pattern {
   background-position: center 45%;
 }
 
-#menu[data-active-index="1"] > #background-pattern {
+#menu[data-active-index="1"]>#background-pattern {
   background-position: center 55%;
 }
 
-#menu[data-active-index="2"] > #background-pattern {
+#menu[data-active-index="2"]>#background-pattern {
   background-position: center 65%;
 }
 
-#menu-items:hover ~ #background-img{
+#menu-items:hover~#background-img {
   background-size: 130vmax;
   opacity: 0.2;
 }
 
-#menu[data-active-index="0"] > #background-img {
+#menu[data-active-index="0"]>#background-img {
   background-position: center 45%;
 }
 
-#menu[data-active-index="1"] > #background-img {
+#menu[data-active-index="1"]>#background-img {
   background-position: center 55%;
 }
 
-#menu[data-active-index="2"] > #background-img {
+#menu[data-active-index="2"]>#background-img {
   background-position: center 65%;
 }
 
