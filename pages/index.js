@@ -24,10 +24,22 @@ export default function Home() {
 
   return (
     <div className="bg">
-      <div className='loading-layer'>
-        <div className='title-box'>
+      <div className="loading-layer">
+        <div className="title-box">
           <div className="title">
-            Fit Generator
+            <div className="letter"> F </div>
+            <div className="letter"> i </div>
+            <div className="letter"> t </div>
+            <div className="letter">&nbsp;</div>
+            <div className="letter"> G </div>
+            <div className="letter"> e </div>
+            <div className="letter"> n </div>
+            <div className="letter"> e </div>
+            <div className="letter"> r </div>
+            <div className="letter"> a </div>
+            <div className="letter"> t </div>
+            <div className="letter"> o </div>
+            <div className="letter"> r </div>
           </div>
         </div>
       </div>

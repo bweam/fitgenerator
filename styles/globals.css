@@ -66,10 +66,20 @@ a {
 }
 
 .title{
+  display: flex;
   font-family: 'Times New Roman', Times, serif;
   font-size: clamp(3rem, 8vw, 8rem);
+  flex-direction: row;
   cursor: pointer;
+  transition: font-size 400ms ease, opacity 800ms ease;
 }
+
+/* .title:hover{
+  font-size: clamp(4rem, 9vw, 9rem);
+  opacity: 0.2;
+} */
+
+
 
 #menu {
   width: 100vw;
